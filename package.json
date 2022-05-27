@@ -1,0 +1,16 @@
+{
+  "name": "wedding",
+  "version": "1.0.0",
+  "description": "wedding",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "dev-diki",
+  "license": "ISC",
+  "homepage": "https://dev-diki.github.io/wedding",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}

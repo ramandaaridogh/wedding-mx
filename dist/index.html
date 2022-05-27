@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Ramanda Rido Saputra">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+    <title>Wedding - Ramanda ❤️ Mx</title>
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/flaticon.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/magnific-popup.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="assets/css/owl.theme.css" rel="stylesheet">
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <link href="assets/css/slick-theme.css" rel="stylesheet">
+    <link href="assets/css/swiper.min.css" rel="stylesheet">
+    <link href="assets/css/nice-select.css" rel="stylesheet">
+    <link href="assets/css/owl.transitions.css" rel="stylesheet">
+    <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
+    <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<script>
+	//<![CDATA[
+	shortcut = {
+		all_shortcuts: {},
+		add: function(a, b, c) {
+			var d = {
+				type: "keydown",
+				propagate: !1,
+				disable_in_input: !1,
+				target: document,
+				keycode: !1
+			};
+			if (c)
+				for (var e in d) "undefined" == typeof c[e] && (c[e] = d[e]);
+			else c = d;
+			d = c.target, "string" == typeof c.target && (d = document.getElementById(c.target)), a = a.toLowerCase(), e = function(d) {
+				d = d || window.event;
+				if (c.disable_in_input) {
+					var e;
+					d.target ? e = d.target : d.srcElement && (e = d.srcElement), 3 == e.nodeType && (e = e.parentNode);
+					if ("INPUT" == e.tagName || "TEXTAREA" == e.tagName) return
+				}
+				d.keyCode ? code = d.keyCode : d.which && (code = d.which), e = String.fromCharCode(code).toLowerCase(), 188 == code && (e = ","), 190 == code && (e = ".");
+				var f = a.split("+"),
+					g = 0,
+					h = {
+						"`": "~",
+						1: "!",
+						2: "@",
+						3: "#",
+						4: "$",
+						5: "%",
+						6: "^",
+						7: "&",
+						8: "*",
+						9: "(",
+						0: ")",
+						"-": "_",
+						"=": "+",
+						";": ":",
+						"'": '"',
+						",": "<",
+						".": ">",
+						"/": "?",
+						"\\": "|"
+					},
+					i = {
+						esc: 27,
+						escape: 27,
+						tab: 9,
+						space: 32,
+						"return": 13,
+						enter: 13,
+						backspace: 8,
+						scrolllock: 145,
+						scroll_lock: 145,
+						scroll: 145,
+						capslock: 20,
+						caps_lock: 20,
+						caps: 20,
+						numlock: 144,
+						num_lock: 144,
+						num: 144,
+						pause: 19,
+						"break": 19,
+						insert: 45,
+						home: 36,
+						"delete": 46,
+						end: 35,
+						pageup: 33,
+						page_up: 33,
+						pu: 33,
+						pagedown: 34,
+						page_down: 34,
+						pd: 34,
+						left: 37,
+						up: 38,
+						right: 39,
+						down: 40,
+						f1: 112,
+						f2: 113,
+						f3: 114,
+						f4: 115,
+						f5: 116,
+						f6: 117,
+						f7: 118,
+						f8: 119,
+						f9: 120,
+						f10: 121,
+						f11: 122,
+						f12: 123
+					},
+					j = !1,
+					l = !1,
+					m = !1,
+					n = !1,
+					o = !1,
+					p = !1,
+					q = !1,
+					r = !1;
+				d.ctrlKey && (n = !0), d.shiftKey && (l = !0), d.altKey && (p = !0), d.metaKey && (r = !0);
+				for (var s = 0; k = f[s], s < f.length; s++) "ctrl" == k || "control" == k ? (g++, m = !0) : "shift" == k ? (g++, j = !0) : "alt" == k ? (g++, o = !0) : "meta" == k ? (g++, q = !0) : 1 < k.length ? i[k] == code && g++ : c.keycode ? c.keycode == code && g++ : e == k ? g++ : h[e] && d.shiftKey && (e = h[e], e == k && g++);
+				if (g == f.length && n == m && l == j && p == o && r == q && (b(d), !c.propagate)) return d.cancelBubble = !0, d.returnValue = !1, d.stopPropagation && (d.stopPropagation(), d.preventDefault()), !1
+			}, this.all_shortcuts[a] = {
+				callback: e,
+				target: d,
+				event: c.type
+			}, d.addEventListener ? d.addEventListener(c.type, e, !1) : d.attachEvent ? d.attachEvent("on" + c.type, e) : d["on" + c.type] = e
+		},
+		remove: function(a) {
+			var a = a.toLowerCase(),
+				b = this.all_shortcuts[a];
+			delete this.all_shortcuts[a];
+			if (b) {
+				var a = b.event,
+					c = b.target,
+					b = b.callback;
+				c.detachEvent ? c.detachEvent("on" + a, b) : c.removeEventListener ? c.removeEventListener(a, b, !1) : c["on" + a] = !1
+			}
+		}
+	}, shortcut.add("Ctrl+U", function() {
+		top.location.href = "https://dev-diki.github.io/wedding"
+	});
+	//]]>
+</script>
+
+<body>
+    <audio autoplay loop>
+        <source src="assets/music/Kaleb_J _Its_Only_Me_Official.mp3">
+    </audio>
+    <!-- start page-wrapper -->
+    <div class="page-wrapper">
+        <!-- start preloader -->
+        <div class="preloader">
+            <div class="vertical-centered-box">
+                <div class="content">
+                    <div class="loader-circle"></div>
+                    <div class="loader-line-mask">
+                        <div class="loader-line"></div>
+                    </div>
+                    <img src="assets/images/favicon.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- end preloader -->
+        <!-- Start header -->
+        <header id="header">
+            <div class="wpo-site-header wpo-header-style-2">
+                <nav class="navigation navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
+                                <div class="mobail-menu">
+                                    <button type="button" class="navbar-toggler open-btn">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar first-angle"></span>
+                                        <span class="icon-bar middle-angle"></span>
+                                        <span class="icon-bar last-angle"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6 col-6">
+                                <div class="navbar-header">
+                                    <a class="navbar-brand" href="https://dev-diki.github.io/wedding"><img src="assets/images/logo.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-1 col-1">
+                                <div id="navbar" class="collapse navbar-collapse navigation-holder">
+                                    <button class="menu-close"><i class="ti-close"></i></button>
+                                    <ul class="nav navbar-nav mb-2 mb-lg-0">
+                                        <li>
+                                            <a class="active" href="https://dev-diki.github.io/wedding">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="#love">Our Love Story</a>
+                                        </li>
+                                        <li>
+                                            <a href="#moments">Sweets Moments</a>
+                                        </li>
+                                        <li>
+                                            <a href="#time">Times & Place</a>
+                                        </li>
+                                        <li><a href="#contact">Contact</a></li>
+                                    </ul>
+
+                                </div><!-- end of nav-collapse -->
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-2">
+                                <div class="header-right">  
+                                    <span class="heart">
+                                        <i class="fi flaticon-heart"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end of container -->
+                </nav>
+            </div>
+        </header>
+        <!-- end of header -->
+        <!-- start of hero -->
+        <section class="static-hero-s2">
+            <div class="hero-container" id="home">
+                <div class="hero-inner">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="text-grid bride">
+                                <div class="couple-img">
+                                    <img src="assets/images/slider/shape5.png" alt="">
+                                </div>
+                                <h3>Diki Pahrilah S.kom</h3>
+                                <p>Putra Bungsu dari bapak Karto dan Ibu Eti. </p>
+                            </div>
+                            <div class="middle-couple-pic">
+                                <img src="assets/images/portfolio/coupleku.png" alt="">
+                            </div>
+                            <div class="text-grid groom">
+                                <div class="couple-img">
+                                    <img src="assets/images/slider/shape6.png" alt="">
+                                </div>
+                                <h3>Hanum Nurhaliza</h3>
+                                <p>Putri Bungsu dari bapak H.Sahrul Mutakin dan Ibu Hj. Siti Sobariah. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flower-shape-1"><img src="assets/images/slider/flower1.png" alt=""></div>
+            <div class="flower-shape-2"><img src="assets/images/slider/flower2.png" alt=""></div>
+        </section>
+        <!-- end of hero slider -->
+
+        <!-- start story-section -->
+        <section class="story-section section-padding" id="story">
+            <div class="container" id="love">
+                <div class="row">
+                    <div class="wpo-section-title-s2">
+                        <div class="section-title-simg">
+                            <img src="assets/images/section-title2.png" alt="">
+                        </div>
+                        <h2>Our Love Story</h2>
+                        <div class="section-title-img">
+                            <div class="round-ball"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="story-timeline">
+                            <div class="round-shape"></div>
+                            <div class="row">
+                                <div class="col col-lg-6 col-12">
+                                    <div class="story-text right-align-text">
+                                        <h3>First time we meet</h3>
+                                        <span class="date">25 Juni 2021</span>
+                                        <p>Selama Hampir 1 tahun LDR lebih dan memutuskan untuk datang ke rumahnya, dan bilang sama
+                                            kedua orang tuanya dengan tujuan dan niat yang baik</p>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-6 col-12">
+                                    <div class="img-holder">
+                                        <img src="assets/images/story/juni.jpg" alt class="img img-responsive">
+                                        <div class="story-shape-img">
+                                            <img src="assets/images/story/shape.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-lg-6 col-12">
+                                    <div class="img-holder right-align-text left-site">
+                                        <img src="assets/images/story/agustus.jpeg" alt class="img img-responsive">
+                                        <div class="story-shape-img">
+                                            <img src="assets/images/story/shape.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-6 col-12 text-holder">
+                                    <span class="heart">
+                                        <i class="fi flaticon-heart"></i>
+                                    </span>
+                                    <div class="story-text">
+                                        <h3>First Date</h3>
+                                        <span class="date">28 Agustus 2021</span>
+                                        <p>Tepatnya bulan agustus datang lagi ke kota Tasik Malaya, sambil jajan bareng dan ngobrol lebih serius
+                                            merencanakan pertunangan.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-lg-6 col-12">
+                                    <div class="img-holder video-holder left-site">
+                                        <img src="assets/images/story/engangement.jpg" alt class="img img-responsive">
+                                        <div class="story-shape-img">
+                                            <img src="assets/images/story/shape.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-6 col-12 text-holder">
+                                    <span class="heart">
+                                        <i class="fi flaticon-dove"></i>
+                                    </span>
+                                    <div class="story-text">
+                                        <h3>Our Engagement</h3>
+                                        <span class="date">30 Oktober 2021</span>
+                                        <p>Tepatnya hari sabtu, 30 Oktober tahun 2021 saya dan kelurga datang ke rumahnya dengan
+                                            tujuan untuk mengikat atau tunangan agar tidak terdahului oleh orang lain. :)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col offset-lg-6 col-lg-6 col-12 text-holder">
+                                    <span class="heart">
+                                        <i class="fi flaticon-wedding-rings"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-lg-6 col-12 text-holder right-heart">
+                                    <div class="story-text right-align-text">
+                                        <h3>Marriage Proposal</h3>
+                                        <span class="date">29 Mei 2022</span>
+                                        <p>بِسْــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْـــــــمِ
+                                            <br>
+                                            kami akan melaksanakan pernikahan dengan kesepakatan dan ketentuan yang telah ditetapkan, 
+                                            yaitu pada hari minggu 29 mei 2022.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-6 col-12">
+                                    <div class="img-holder right-align-text">
+                                        <img src="assets/images/story/nikah.png" alt class="img img-responsive">
+                                        <div class="story-shape-img">
+                                            <img src="assets/images/story/shape.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col offset-lg-6 col-lg-6 col-12 text-holder">
+                                    <span class="heart">
+                                        <i class="fi flaticon-calendar"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end story-section -->
+
+        <!-- start wpo-portfolio-section -->
+        <section class="wpo-portfolio-section-s3 section-padding">
+            <div class="container" id="moments">
+                <div class="row">
+                    <div class="wpo-section-title-s2">
+                        <div class="section-title-simg">
+                            <img src="assets/images/section-title2.png" alt="">
+                        </div>
+                        <h2>Sweet Moments</h2>
+                        <div class="section-title-img">
+                            <div class="round-ball"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sortable-gallery">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="portfolio-grids gallery-container clearfix">
+                                <div class="grid">
+                                    <div class="img-holder">
+                                        <a href="assets/images/portfolio/fostud1-modified.png" class="fancybox"
+                                            data-fancybox-group="gall-1">
+                                            <img src="assets/images/portfolio/fostud1-modified.png" alt class="img img-responsive">
+                                            <div class="hover-content">
+                                                <i class="ti-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="img-holder">
+                                        <a href="assets/images/portfolio/fostud6-modified.png" class="fancybox"
+                                            data-fancybox-group="gall-1">
+                                            <img src="assets/images/portfolio/fostud6-modified.png" alt class="img img-responsive">
+                                            <div class="hover-content">
+                                                <i class="ti-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="img-holder">
+                                        <a href="assets/images/portfolio/fostud3-modified.png" class="fancybox"
+                                            data-fancybox-group="gall-1">
+                                            <img src="assets/images/portfolio/fostud3-modified.png" alt class="img img-responsive">
+                                            <div class="hover-content">
+                                                <i class="ti-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="portfolio-grids gallery-container clearfix">
+                                <div class="grid">
+                                    <div class="img-holder">
+                                        <a href="assets/images/portfolio/fostud5-modified.png" class="fancybox"
+                                            data-fancybox-group="gall-1">
+                                            <img src="assets/images/portfolio/fostud5-modified.png" alt class="img img-responsive">
+                                            <div class="hover-content">
+                                                <i class="ti-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="img-holder">
+                                        <a href="assets/images/portfolio/fostud8-modified.jpeg" class="fancybox"
+                                            data-fancybox-group="gall-1">
+                                            <img src="assets/images/portfolio/fostud8-modified.jpeg" alt class="img img-responsive">
+                                            <div class="hover-content">
+                                                <i class="ti-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="img-holder">
+                                        <a href="assets/images/portfolio/fostud9-modified.jpg" class="fancybox"
+                                            data-fancybox-group="gall-1">
+                                            <img src="assets/images/portfolio/fostud9-modified.jpg" alt class="img img-responsive">
+                                            <div class="hover-content">
+                                                <i class="ti-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- end container -->
+        </section>
+        <!-- end wpo-portfolio-section -->
+
+        <div class="wpo-cta-section-s3">
+            <div class="conatiner-fluid">
+                <div class="wpo-cta-item">
+                    <h2>Adventure Begins</h2>
+                    <p>Minggu 29 Mei 2022, Gobras Tasikmalaya Jawa Barat</p>
+                    <a class="theme-btn-s2" href="undangan.html">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- end wpo-cta-section -->
+
+        <!-- start wpo-event-section -->
+        <section class="wpo-event-section section-padding">
+            <div class="container" id="time">
+                <div class="row">
+                    <div class="wpo-section-title-s2">
+                        <div class="section-title-simg">
+                            <img src="assets/images/section-title2.png" alt="">
+                        </div>
+                        <h2>TIME AND PLACE</h2>
+                        <div class="section-title-img">
+                            <div class="round-ball"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wpo-event-wrap">
+                    <div class="row">
+                        <div class="col col-lg-4 col-md-6 col-12">
+                            <div class="wpo-event-item">
+                                <div class="wpo-event-text">
+                                    <h2>The Reception</h2>
+                                    <ul>
+                                        <li>Minggu, 29 Mei, 2022
+                                            08:00 Pagi – Selesai</li>
+                                        <li>Gobras Gunung Kanyere RT/RW 01/05 Kel.Mulyasari Kec.Tamansari Kota Tasikmalaya Kode pos 46196</li>
+
+                                        <li> <a class="popup-gmaps"
+                                                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.8878774623117!2d108.22685451477545!3d-7.366463094684369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f5785a02fba8f%3A0x8259068f1471a5d1!2sPrimary%20Clinic%20Al-Muslimin!5e0!3m2!1sen!2sid!4v1645532862499!5m2!1sen!2sid">See
+                                                Location</a></li>
+                                    </ul>
+                                </div>
+                                <div class="event-shape-1">
+                                    <img src="assets/images/event-shape-1.png" alt="">
+                                </div>
+                                <div class="event-shape-2">
+                                    <img src="assets/images/event-shape-2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 col-md-6 col-12">
+                            <div class="wpo-event-item">
+                                <div class="wpo-event-text">
+                                    <h2>THE CEREMONY</h2>
+                                    <ul>
+                                        <li>Minggu, 29 Mei, 2022
+                                            08:00 Pagi – Selesai</li>
+                                        <li>Gobras Gunung Kanyere RT/RW 01/05 Kel.Mulyasari Kec.Tamansari Kota Tasikmalaya Kode pos 46196</li>
+
+                                        <li> <a class="popup-gmaps"
+                                                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.8878774623117!2d108.22685451477545!3d-7.366463094684369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f5785a02fba8f%3A0x8259068f1471a5d1!2sPrimary%20Clinic%20Al-Muslimin!5e0!3m2!1sen!2sid!4v1645532862499!5m2!1sen!2sid">See
+                                                Location</a></li>
+                                    </ul>
+                                </div>
+                                <div class="event-shape-1">
+                                    <img src="assets/images/event-shape-1.png" alt="">
+                                </div>
+                                <div class="event-shape-2">
+                                    <img src="assets/images/event-shape-2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 col-md-6 col-12">
+                            <div class="wpo-event-item">
+                                <div class="wpo-event-text">
+                                    <h2>Wedding Party</h2>
+                                    <ul>
+                                        <li>Minggu, 29 Mei, 2022
+                                            08:00 Pagi – Selesai</li>
+                                        <li>Gobras Gunung Kanyere RT/RW 01/05 Kel.Mulyasari Kec.Tamansari Kota Tasikmalaya Kode pos 46196</li>
+
+                                        <li> <a class="popup-gmaps"
+                                                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.8878774623117!2d108.22685451477545!3d-7.366463094684369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f5785a02fba8f%3A0x8259068f1471a5d1!2sPrimary%20Clinic%20Al-Muslimin!5e0!3m2!1sen!2sid!4v1645532862499!5m2!1sen!2sid">See
+                                                Location</a></li>
+                                    </ul>
+                                </div>
+                                <div class="event-shape-1">
+                                    <img src="assets/images/event-shape-1.png" alt="">
+                                </div>
+                                <div class="event-shape-2">
+                                    <img src="assets/images/event-shape-2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- end container -->
+        </section>
+        <!-- end wpo-event-section -->
+        <!-- start wpo-partners-section -->
+        <section class="wpo-partners-section-s3">
+            <h2 class="hidden">Partners</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="partner-grids partners-slider owl-carousel">
+                            <div class="grid">
+                                <img src="assets/images/partners/1.png" alt>
+                            </div>
+                            <div class="grid">
+                                <img src="assets/images/partners/2.png" alt>
+                            </div>
+                            <div class="grid">
+                                <img src="assets/images/partners/3.png" alt>
+                            </div>
+                            <div class="grid">
+                                <img src="assets/images/partners/5.png" alt>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end wpo-partners-section-->
+
+        <!--  start wpo-contact-map -->
+        <section class="wpo-contact-map-section">
+            <h2 class="hidden">Contact map</h2>
+            <div class="wpo-contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.8878774623117!2d108.22685451477545!3d-7.366463094684369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f5785a02fba8f%3A0x8259068f1471a5d1!2sPrimary%20Clinic%20Al-Muslimin!5e0!3m2!1sen!2sid!4v1645532862499!5m2!1sen!2sid" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+        <!-- end wpo-contact-map -->
+
+        <!-- start of wpo-site-footer-section -->
+        <footer class="wpo-site-footer">
+            <div class="wpo-upper-footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="widget about-widget">
+                                <p>
+                                    إِذَا تَزَوَّجَ العَبْدُ فَقَدْ كَمَّلَ نَصْفَ الدِّيْنِ ، فَلْيَتَّقِ اللهَ فِي النِّصْفِ البَاقِي
+                                    <br>
+                                    Artinya: “Jika seseorang menikah, maka ia telah menyempurnakan separuh agamanya. 
+                                    Karenanya, bertakwalah pada Allah pada separuh yang lainnya.” (HR. Al Baihaqi)
+                                </p>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/dickey.fahrillah/" target="_blank">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/devdiki" target="_blank">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://instagram.com/dev.diki/" target="_blank">
+                                            <i class="ti-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/dev-diki/" target="_blank">
+                                            <i class="ti-github"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-xl-3  col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="widget link-widget">
+                                <div class="widget-title">
+                                    <h3>Information</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="https://dev-diki.github.io/wedding">Home</a></li>
+                                    <li><a href="#love">Our Love Story</a></li>
+                                    <li><a href="#moments">Sweet Moments</a></li>
+                                    <li><a href="#time">Time & Place</a></li>
+                                    <li><a href="#contact">Contact us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-xl-3  col-lg-4 col-md-6 col-sm-12 col-12" id="contact">
+                            <div class="widget wpo-service-link-widget">
+                                <div class="widget-title">
+                                    <h3>Contact </h3>
+                                </div>
+                                <div class="contact-ft">
+                                    <p>Would you have any enquiries.Please feel free to contuct us</p>
+                                    <ul>
+                                        <li><i class="fi flaticon-email"></i>dikipahrilah@programmer.net</li>
+                                        <li><i class="fi flaticon-phone-call"></i>083100138810</li>
+                                        <li><i class="fi flaticon-maps-and-flags"></i>Kota Tasik Malaya – Jawa Barat
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-xl-3  col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="widget instagram">
+                                <div class="widget-title">
+                                    <h3>Quotes & Do'a</h3>
+                                </div>
+                               <div class="d-flex">
+                                بِسْــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْـــــــمِ
+                                <br>
+                                “Aku bersyukur kepada allah yang mempertemukanku dengan pasangan hati.
+                                Maka bukalah pintu rizki kami dan berkahilah kami denganya. Ammiinn“
+
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end container -->
+            </div>
+            <div class="wpo-lower-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-xs-12">
+                            <p class="copyright"> &copy; <script>document.write(new Date().getFullYear())</script> Wedding Diki <i class="fi flaticon-heart"></i> Hanum. Design & Edited By <a
+                                    href="https://github.com/dev-diki/" target="_blank">Ramanda Rido Saputra</a>. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end of wpo-site-footer-section -->
+
+    <!-- color-switcher -->
+        <div class="color-switcher-wrap">
+            <div class="color-switcher-item">
+                <div class="color-toggle-btn">
+                    <i class="fa fa-cog"></i>
+                </div>
+                <ul id="switcher">
+                    <li class="btn btn1" id="Button1"></li>
+                    <li class="btn btn2" id="Button2"></li>
+                    <li class="btn btn3" id="Button3"></li>
+                    <li class="btn btn4" id="Button4"></li>
+                    <li class="btn btn5" id="Button5"></li>
+                    <li class="btn btn6" id="Button6"></li>
+                    <li class="btn btn7" id="Button7"></li>
+                    <li class="btn btn8" id="Button8"></li>
+                    <li class="btn btn9" id="Button9"></li>
+                    <li class="btn btn10" id="Button10"></li>
+                    <li class="btn btn11" id="Button11"></li>
+                    <li class="btn btn12" id="Button12"></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- end of page-wrapper -->
+
+    <!-- All JavaScript files
+    ================================================== -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugins for this template -->
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="assets/js/jquery.dlmenu.js"></script>
+    <script src="assets/js/jquery-plugin-collection.js"></script>
+    <!-- Custom script for this template -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

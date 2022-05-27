@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Dev Diki">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+    <title>Wedding - Diki ❤️ Hanum</title>
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/flaticon.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/magnific-popup.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="assets/css/owl.theme.css" rel="stylesheet">
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <link href="assets/css/slick-theme.css" rel="stylesheet">
+    <link href="assets/css/swiper.min.css" rel="stylesheet">
+    <link href="assets/css/nice-select.css" rel="stylesheet">
+    <link href="assets/css/owl.transitions.css" rel="stylesheet">
+    <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
+    <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<script>
+	//<![CDATA[
+	shortcut = {
+		all_shortcuts: {},
+		add: function(a, b, c) {
+			var d = {
+				type: "keydown",
+				propagate: !1,
+				disable_in_input: !1,
+				target: document,
+				keycode: !1
+			};
+			if (c)
+				for (var e in d) "undefined" == typeof c[e] && (c[e] = d[e]);
+			else c = d;
+			d = c.target, "string" == typeof c.target && (d = document.getElementById(c.target)), a = a.toLowerCase(), e = function(d) {
+				d = d || window.event;
+				if (c.disable_in_input) {
+					var e;
+					d.target ? e = d.target : d.srcElement && (e = d.srcElement), 3 == e.nodeType && (e = e.parentNode);
+					if ("INPUT" == e.tagName || "TEXTAREA" == e.tagName) return
+				}
+				d.keyCode ? code = d.keyCode : d.which && (code = d.which), e = String.fromCharCode(code).toLowerCase(), 188 == code && (e = ","), 190 == code && (e = ".");
+				var f = a.split("+"),
+					g = 0,
+					h = {
+						"`": "~",
+						1: "!",
+						2: "@",
+						3: "#",
+						4: "$",
+						5: "%",
+						6: "^",
+						7: "&",
+						8: "*",
+						9: "(",
+						0: ")",
+						"-": "_",
+						"=": "+",
+						";": ":",
+						"'": '"',
+						",": "<",
+						".": ">",
+						"/": "?",
+						"\\": "|"
+					},
+					i = {
+						esc: 27,
+						escape: 27,
+						tab: 9,
+						space: 32,
+						"return": 13,
+						enter: 13,
+						backspace: 8,
+						scrolllock: 145,
+						scroll_lock: 145,
+						scroll: 145,
+						capslock: 20,
+						caps_lock: 20,
+						caps: 20,
+						numlock: 144,
+						num_lock: 144,
+						num: 144,
+						pause: 19,
+						"break": 19,
+						insert: 45,
+						home: 36,
+						"delete": 46,
+						end: 35,
+						pageup: 33,
+						page_up: 33,
+						pu: 33,
+						pagedown: 34,
+						page_down: 34,
+						pd: 34,
+						left: 37,
+						up: 38,
+						right: 39,
+						down: 40,
+						f1: 112,
+						f2: 113,
+						f3: 114,
+						f4: 115,
+						f5: 116,
+						f6: 117,
+						f7: 118,
+						f8: 119,
+						f9: 120,
+						f10: 121,
+						f11: 122,
+						f12: 123
+					},
+					j = !1,
+					l = !1,
+					m = !1,
+					n = !1,
+					o = !1,
+					p = !1,
+					q = !1,
+					r = !1;
+				d.ctrlKey && (n = !0), d.shiftKey && (l = !0), d.altKey && (p = !0), d.metaKey && (r = !0);
+				for (var s = 0; k = f[s], s < f.length; s++) "ctrl" == k || "control" == k ? (g++, m = !0) : "shift" == k ? (g++, j = !0) : "alt" == k ? (g++, o = !0) : "meta" == k ? (g++, q = !0) : 1 < k.length ? i[k] == code && g++ : c.keycode ? c.keycode == code && g++ : e == k ? g++ : h[e] && d.shiftKey && (e = h[e], e == k && g++);
+				if (g == f.length && n == m && l == j && p == o && r == q && (b(d), !c.propagate)) return d.cancelBubble = !0, d.returnValue = !1, d.stopPropagation && (d.stopPropagation(), d.preventDefault()), !1
+			}, this.all_shortcuts[a] = {
+				callback: e,
+				target: d,
+				event: c.type
+			}, d.addEventListener ? d.addEventListener(c.type, e, !1) : d.attachEvent ? d.attachEvent("on" + c.type, e) : d["on" + c.type] = e
+		},
+		remove: function(a) {
+			var a = a.toLowerCase(),
+				b = this.all_shortcuts[a];
+			delete this.all_shortcuts[a];
+			if (b) {
+				var a = b.event,
+					c = b.target,
+					b = b.callback;
+				c.detachEvent ? c.detachEvent("on" + a, b) : c.removeEventListener ? c.removeEventListener(a, b, !1) : c["on" + a] = !1
+			}
+		}
+	}, shortcut.add("Ctrl+U", function() {
+		top.location.href = "https://dev-diki.github.io/wedding"
+	});
+	//]]>
+</script>
+
+<body>
+
+    <!-- start page-wrapper -->
+    <div class="page-wrapper">
+        <!-- start preloader -->
+        <div class="preloader">
+            <div class="vertical-centered-box">
+                <div class="content">
+                    <div class="loader-circle"></div>
+                    <div class="loader-line-mask">
+                        <div class="loader-line"></div>
+                    </div>
+                    <img src="assets/images/favicon.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- end preloader -->
+        
+        <!-- start of hero -->
+        <section class="static-hero-s3">
+            <div class="hero-container">
+                <div class="hero-inner">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6">
+                                <div class="wpo-event-item">
+                                    <div class="wpo-event-text">
+                                        <h2>Diki & Hanum</h2>
+                                        <p>We Are Getting Married Mei 29,2022</p>
+                                        <ul>
+                                            <li>Minggu, 29 Mei, 2022 <br>
+                                                08:00 Pagi – Selesai</li>
+                                            <li>Gobras Tasikmalaya Jawa Barat</li>
+                                            <li>Phone : 083100138810</li>
+        
+                                            <li> <a class="popup-gmaps"
+                                                    href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.8878774623117!2d108.22685451477545!3d-7.366463094684369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f5785a02fba8f%3A0x8259068f1471a5d1!2sPrimary%20Clinic%20Al-Muslimin!5e0!3m2!1sen!2sid!4v1645532862499!5m2!1sen!2sid">See
+                                                    Location</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of hero slider -->
+
+    <!-- color-switcher -->
+        <div class="color-switcher-wrap">
+            <div class="color-switcher-item">
+                <div class="color-toggle-btn">
+                    <i class="fa fa-cog"></i>
+                </div>
+                <ul id="switcher">
+                    <li class="btn btn1" id="Button1"></li>
+                    <li class="btn btn2" id="Button2"></li>
+                    <li class="btn btn3" id="Button3"></li>
+                    <li class="btn btn4" id="Button4"></li>
+                    <li class="btn btn5" id="Button5"></li>
+                    <li class="btn btn6" id="Button6"></li>
+                    <li class="btn btn7" id="Button7"></li>
+                    <li class="btn btn8" id="Button8"></li>
+                    <li class="btn btn9" id="Button9"></li>
+                    <li class="btn btn10" id="Button10"></li>
+                    <li class="btn btn11" id="Button11"></li>
+                    <li class="btn btn12" id="Button12"></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- end of page-wrapper -->
+
+    <!-- All JavaScript files
+    ================================================== -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugins for this template -->
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="assets/js/jquery.dlmenu.js"></script>
+    <script src="assets/js/jquery-plugin-collection.js"></script>
+    <!-- Custom script for this template -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
